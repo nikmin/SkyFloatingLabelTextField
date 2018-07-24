@@ -40,7 +40,7 @@ class CustomizingColorsViewController: UIViewController {
         #if swift(>=4.0)
             attributes = [NSAttributedStringKey.foregroundColor.rawValue: UIColor.white]
         #else
-            attributes = [NSForegroundColorAttributeName: UIColor.white]
+            attributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
         #endif
 
         selectedTitleColorControl?.setTitleTextAttributes(attributes, for: .selected)

@@ -263,7 +263,7 @@ class ShowcaseExampleViewController: UIViewController, UITextFieldDelegate {
             return
         }
 
-        if email.characters.isEmpty {
+        if email.isEmpty {
             emailField.errorMessage = nil
         } else if !validateEmail(email) {
             emailField.errorMessage = NSLocalizedString(
