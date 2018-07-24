@@ -150,6 +150,13 @@ open class SkyFloatingLabelTextField: UITextField { // swiftlint:disable:this ty
         }
     }
 
+    /// A UIColor value that determines the color used for the title label and line when text field is disabled
+    @IBInspectable dynamic open var disabledLineColor: UIColor = UIColor(white: 0.88, alpha: 1.0) {
+        didSet {
+            updateLineView()
+        }
+    }
+
     /// A UIColor value that determines the text color of the title label when editing
     @IBInspectable dynamic open var selectedTitleColor: UIColor = .blue {
         didSet {
@@ -434,7 +441,7 @@ open class SkyFloatingLabelTextField: UITextField { // swiftlint:disable:this ty
         }
 
         if !isEnabled {
-            lineView.backgroundColor = disabledColor
+            lineView.backgroundColor = disabledLineColor
         } else if hasErrorMessage {
             lineView.backgroundColor = lineErrorColor ?? errorColor
         } else {

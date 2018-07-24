@@ -285,7 +285,7 @@ class SkyFloatingLabelTextFieldTests: XCTestCase { // swiftlint:disable:this typ
         floatingLabelTextField.isEnabled = false
 
         // when
-        floatingLabelTextField.disabledColor = self.customColor
+        floatingLabelTextField.disabledLineColor = self.customColor
 
         // then
         XCTAssertEqual(floatingLabelTextField.lineView.backgroundColor, self.customColor)
